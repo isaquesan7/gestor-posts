@@ -1,0 +1,286 @@
+body {
+  margin: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E4E4E4;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Configurações do APP */
+.div-table{
+  max-width: 1200px;
+  padding: 20px 20px;
+  background-color: #FFF;
+  border-radius: 20px;
+  margin: 50px auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.div-table-top{ /* Titulo do APP */
+  display: flex;
+  top: 0;
+  position: sticky;
+  float: initial;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  z-index: 100;
+  background-color: #fff;
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+  .div-table{
+    padding: 20px 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    margin: 20px auto;
+  }
+
+  .div-table-top{ /* Titulo do APP */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .no-mobile{ /* Desabilita para versão mobile */
+    display: none !important;
+  }
+
+  .table{ /* Tabela */
+    table-layout: fixed !important;
+    text-align: center !important;
+  }
+
+  .table th{ /* Tabela- linha do header */
+    font-size: 10px;
+  }
+
+  .acao{ /* Sessão AÇÃO da tabela */
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container-table{ /* Container onde a tabela esta */
+    height: 460px !important;
+  }
+}
+
+.div-title h1{ /* Titulo do APP */
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.div-new-post{ /* Botão nova postagem */
+  display: flex;
+}
+
+.div-new-post a{ /* Botão nova postagem */
+  align-self: center;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.div-new-post a:hover{ /* Botão nova postagem */
+  background-color: #E4E4E4;
+}
+
+.container-table{ /* Container onde a tabela esta */
+  overflow: scroll;
+  height: 600px;
+}
+
+.container-table::-webkit-scrollbar{ /* Container onde a tabela esta - retirar scrollbar */
+  display: none !important;
+}
+
+.table{ /* Tabela */
+  width: 100%;
+  table-layout: fixed;
+  text-align: start;
+  border: 1px solid #FFF !important;
+  word-wrap: break-word;
+}
+
+.table-responsive{
+  height: 600px !important;
+  overflow: scroll;
+}
+
+.table-responsive::-webkit-scrollbar{
+  width: 0;
+  background:#E4E4E4;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+  background:#000;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover{
+  background: #3699CF;
+}
+
+@media (max-width: 1000px) {
+  .table{ /* Tabela */
+    table-layout: initial;
+  }
+}
+
+.table thead{ /* Tabela - Head */
+  border: 1px solid #E4E4E4 !important;
+}
+
+.table th{ /* Tabela- linha do header */
+  background-color: #F4F5F8 !important;
+}
+
+.acao-th{ /* Sessão AÇÃO da tabela */
+  text-align: center;
+}
+
+.table td{ /* Tabela- linha do body */
+  border-bottom: none;
+  border-top: 1px solid #E4E4E4 !important;
+  border-right: 1px solid #E4E4E4 !important;
+  background-color: #FFF !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.table td:last-child{ /* Tabela- linha do body */
+  border-right: none !important;
+}
+
+.acao{ /* Sessão AÇÃO da tabela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.acao a{ /* Sessão AÇÃO da tabela - botões */
+  padding: 5px 8px;
+  background-color: #F4F5F8;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.edit{ /* Sessão AÇÃO da tabela - Botão edit */
+  color: #3699CF;
+}
+
+.edit a:hover{ /* Sessão AÇÃO da tabela - Botão edit */
+  background-color: rgba(54, 153, 207, .1);
+}
+
+.delete{ /* Sessão AÇÃO da tabela - Botão delete */
+  color: #FD7A78;
+}
+
+.delete a:hover{ /* Sessão AÇÃO da tabela - Botão delete */
+  background-color: rgba(253, 122, 120, .1);
+}
+
+.view a:hover{ /* Sessão AÇÃO da tabela - Botão visualizar */
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.none{ /* ocultar algo */
+  display: none;
+}
+
+.form-app{ /* configuração da modal */
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: start;
+}
+
+.title-modal-add i{ /* Sessão titulo da modal - icon */
+  color: #ff0000;
+}
+
+.div-filter{ /* Configuração da barra de pesquisa */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: rgba(228, 228, 228, .5);
+  border-radius: 50px;
+}
+
+.div-filter:hover{ /* Configuração da barra de pesquisa */
+  background-color: rgba(228, 228, 228, 1);
+}
+
+.div-filter input{ /* Configuração da barra de pesquisa */
+  max-width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.div-filter i{ /* Configuração da barra de pesquisa -icon */
+  display: flex;
+  width: 10px;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.date-td{ /* Configuração da Tabela - Data */
+  font-size: 14px;
+  text-align: center;
+}
+
+.date{ /* Configuração da Tabela - Data */
+  margin: 5px 0;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+.date i{ /* Configuração da Tabela - Data - icon */
+  padding: 6px 8px;
+  background-color: #3699CF;
+  color: #FFF;
+  border-radius: 5px;
+  margin-right: -2px;
+}
+
+.total-post{ /* Quantidade total de postagens */
+  position: sticky;
+  float: initial;
+  bottom: 0;
+  text-align: start;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #E4E4E4;
+  background-color: #FFF;
+  z-index: 100;
+}
